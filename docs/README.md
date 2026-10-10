@@ -22,7 +22,8 @@ docs/
 │   └── fire-safety-erp.md     The ERP: what may and may not be said yet
 ├── content/
 │   ├── voice-and-copy.md      Tone, headlines, buttons, words to avoid
-│   └── legal.md               What the privacy notice and terms must cover
+│   ├── legal.md               What the privacy notice and terms must cover
+│   └── registrations.md       How to mention DPIIT, Udyam and the legal entity
 ├── design/
 │   ├── brand.md               The logo: idea, files, construction, usage
 │   ├── principles.md          The Apple-like rules, and the "AI look" to avoid

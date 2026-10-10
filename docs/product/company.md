@@ -23,6 +23,22 @@ Company facts for the website. This file is their only source: if something isn'
 | Founder | Navas CK |
 | Website | https://noozytech.com |
 
+## Registrations
+
+How to word these on the site: [registrations](../content/registrations.md). Take every value from the documents themselves.
+
+| | Value |
+|---|---|
+| Legal form | [NEED: sole proprietorship, private limited company, or LLP] |
+| CIN or LLPIN | [NEED: if a company or LLP] |
+| Registered office | [NEED: required on the home page if a company] |
+| DPIIT recognition | [NEED: Certificate of Recognition number (DIPP…) and valid-until date, or "not recognized" if only a Startup India profile exists] |
+| Udyam registration | [NEED: Udyam Registration Number, size class (micro, small or medium) and its classification year] |
+| GSTIN | [NEED: if registered, and whether to show it; optional] |
+| Trademarks | [NEED: any registered trademarks; use ® only for those] |
+
+The owner reports registering through NSWS, Startup India and Udyam. NSWS is the application portal; it isn't shown on the site.
+
 ## Contact
 
 | Use for | Address | Status |
