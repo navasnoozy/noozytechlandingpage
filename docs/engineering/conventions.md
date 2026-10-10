@@ -61,6 +61,7 @@ docs/           These docs
 - Tailwind utilities that use the design tokens from the global stylesheet. No arbitrary values such as `text-[37px]`. If a value is missing, add a token and document it in [tokens](../design/tokens.md).
 - No inline styles and no CSS-in-JS libraries.
 - Dark mode follows the visitor's system setting.
+- **After editing `app/globals.css`, restart `pnpm dev`.** The running dev server doesn't pick up changes to that file, though class changes in components update live ([decision 0009](../decisions/0009-turbopack-file-cache-off.md)).
 - Prefer logical properties (`ms-`, `me-`, `ps-`, `pe-`, `start-`, `end-`) over left and right, so a right-to-left language can be added later without rework.
 
 ## Links and images

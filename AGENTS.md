@@ -39,6 +39,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 | Production build | `pnpm build` |
 | All checks, before every commit | `pnpm check` |
 
+After editing `app/globals.css`, restart `pnpm dev`: the running dev server doesn't pick up changes to that file ([decision 0009](docs/decisions/0009-turbopack-file-cache-off.md)).
+
 ## Rules
 
 1. **Take facts only from `docs/product/`.** Never invent numbers, ratings, download counts, prices, dates, features, customers, awards or quotes. If a fact is missing, write `[NEED: what is missing]` and ask.

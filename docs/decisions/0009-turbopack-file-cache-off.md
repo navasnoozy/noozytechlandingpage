@@ -18,4 +18,5 @@ A stale stylesheet in production would be a silent bug, and this site builds in 
 ## Consequences
 
 - Every dev session and build compiles from scratch. That takes seconds on a site this size.
+- A running `pnpm dev` still doesn't pick up edits to `app/globals.css`, even with the cache off. Restart it after editing that file. Class changes in components do update live, and production builds are always correct.
 - Re-test before turning the cache back on in a later Next.js version: add a rule to `app/globals.css` between two builds and check it reaches the second build's CSS.

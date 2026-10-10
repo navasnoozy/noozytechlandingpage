@@ -75,6 +75,69 @@ export const capsFeatures: {
   },
 ];
 
+/** The ERP is in development: future tense, at most three modules (docs/product/fire-safety-erp.md). */
+export const erpPreview = {
+  eyebrow: "Fire & Safety ERP · In development",
+  headline: "An enterprise solution for fire & safety companies.",
+  lede: "We’re building one system for projects, maintenance contracts and compliance, shaped around how fire & safety companies work.",
+  modules: [
+    {
+      title: "Projects",
+      text: "From enquiry and estimate to installation, testing and handover.",
+    },
+    {
+      title: "Maintenance and service",
+      text: "Planned visits with checklists, breakdown calls, and service reports signed on site.",
+    },
+    {
+      title: "Compliance",
+      text: "Equipment records, open defects and certificates for every building.",
+    },
+  ],
+  earlyAccess: {
+    label: "Request early access",
+    href: `mailto:${site.email.company}?subject=${encodeURIComponent("Fire & Safety ERP early access")}`,
+  },
+  more: { label: "More about the ERP", href: "/fire-safety-erp" },
+};
+
+/** Navas's own words, from "What every NoOzyTech product must be" in docs/product/company.md. */
+export const principles = {
+  headline: "What every NoOzyTech product must be.",
+  items: [
+    {
+      title: "Efficient",
+      text: "It does the job with the fewest steps and the least waiting.",
+    },
+    {
+      title: "Elegant",
+      text: "Nothing on the screen that doesn’t need to be there.",
+    },
+    { title: "Intuitive", text: "People understand it without a manual." },
+    {
+      title: "Honest",
+      text: "No ads, no selling of personal data, no fake features or numbers.",
+    },
+  ],
+};
+
+export const founder = {
+  headline: "Started with a habit.",
+  paragraphs: [
+    `${site.name} was founded in India in ${site.foundingYear} by ${site.founder.name}, who believes people should understand technology and use it well in their own lives.`,
+    "Caps began the same way: writing down daily expenses after starting work for the first time. The habit stuck, and it became an app.",
+  ],
+  link: { label: `About ${site.name}`, href: "/about" },
+};
+
+export const contact = {
+  headline: "Get in touch.",
+  channels: [
+    { label: "Company, partnerships and press", email: site.email.company },
+    { label: "Caps Money Manager support", email: site.email.caps },
+  ],
+};
+
 export const capsPrivacy = {
   headline: "No ads. No data selling. No bank logins.",
   points: [

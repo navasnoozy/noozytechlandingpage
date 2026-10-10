@@ -109,20 +109,32 @@
     --duration-reveal: 700ms;
     --stagger: 100ms;
     --reveal-distance: 24px;
+
+    /* The dark palette, defined once. Dark mode and the .band-dark sections use it. */
+    --dark-surface: #000000;
+    --dark-surface-alt: #161617;
+    --dark-surface-raised: #1d1d1f;
+    --dark-ink: #f5f5f7;
+    --dark-ink-2: #86868b;
+    --dark-ink-3: #6e6e73;
+    --dark-line: rgb(255 255 255 / 0.24);
+    --dark-action: #f5f5f7;
+    --dark-on-action: #1d1d1f;
+    --dark-focus: #2997ff;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-surface: #000000;
-      --color-surface-alt: #161617;
-      --color-surface-raised: #1d1d1f;
-      --color-ink: #f5f5f7;
-      --color-ink-2: #86868b;
-      --color-ink-3: #6e6e73;
-      --color-line: rgb(255 255 255 / 0.24);
-      --color-action: #f5f5f7;
-      --color-on-action: #1d1d1f;
-      --color-focus: #2997ff;
+      --color-surface: var(--dark-surface);
+      --color-surface-alt: var(--dark-surface-alt);
+      --color-surface-raised: var(--dark-surface-raised);
+      --color-ink: var(--dark-ink);
+      --color-ink-2: var(--dark-ink-2);
+      --color-ink-3: var(--dark-ink-3);
+      --color-line: var(--dark-line);
+      --color-action: var(--dark-action);
+      --color-on-action: var(--dark-on-action);
+      --color-focus: var(--dark-focus);
     }
   }
 
@@ -184,6 +196,27 @@
 }
 
 @layer components {
+  /*
+   * A dark band (docs/design/principles.md: at most one per page). Everything
+   * inside uses the dark palette in both modes, so utilities like bg-action
+   * and text-ink-2 just work.
+   */
+  .band-dark {
+    --color-surface: var(--dark-surface);
+    --color-surface-alt: var(--dark-surface-alt);
+    --color-surface-raised: var(--dark-surface-raised);
+    --color-ink: var(--dark-ink);
+    --color-ink-2: var(--dark-ink-2);
+    --color-ink-3: var(--dark-ink-3);
+    --color-line: var(--dark-line);
+    --color-action: var(--dark-action);
+    --color-on-action: var(--dark-on-action);
+    --color-focus: var(--dark-focus);
+    color-scheme: dark;
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+  }
+
   /*
    * The mobile menu (components/layout/site-header.tsx) is a native popover.
    * It fades in and drops 8px; with reduced motion it only fades. The
