@@ -43,7 +43,7 @@ The owner reports registering through NSWS, Startup India and Udyam. NSWS is the
 
 | Use for | Address | Status |
 |---|---|---|
-| Company, partnerships, press, ERP early access | contact@noozytech.com | **Not set up yet.** Create it in Zoho Mail before launch. |
+| Company, partnerships, press, ERP early access | contact@noozytech.com | Active since 2026-10-10. A Zoho Mail alias of the caps@ mailbox; sends with the display name "NoOzyTech". |
 | Caps Money Manager support and privacy | caps@noozytech.com | Active |
 
 Never show caps@ for company matters, or contact@ for Caps support.

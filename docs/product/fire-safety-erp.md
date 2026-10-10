@@ -29,7 +29,7 @@ Planned, not built. Always write about it in the future tense ("will", "is being
 
 - Button label: **Request early access**
 - It opens an email to contact@noozytech.com with the subject "Fire & Safety ERP early access".
-- contact@noozytech.com isn't set up yet. Don't publish the button until it is (see the [launch checklist](../checklists/launch.md)).
+- contact@noozytech.com is active (since 2026-10-10).
 
 ## Never say
 

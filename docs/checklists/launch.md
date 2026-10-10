@@ -14,7 +14,7 @@ Everything that must be true before noozytech.com goes live. Items marked **Owne
 
 ## Email
 
-- [ ] **Owner:** create contact@noozytech.com in Zoho Mail, as a mailbox or an alias, and test sending and receiving.
+- [x] **Owner:** create contact@noozytech.com in Zoho Mail, as a mailbox or an alias, and test sending and receiving. Done 2026-10-10: an alias of the caps@ mailbox, display name "NoOzyTech"; the test email arrived.
 - [ ] **Owner:** add a DMARC record in Cloudflare (start with `p=none` and a reporting address), and check that Zoho's DKIM record is in place.
 
 ## Domain
