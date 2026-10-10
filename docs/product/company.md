@@ -67,6 +67,16 @@ In structured data, the Instagram link goes on the company and the LinkedIn link
 | [Caps Money Manager](caps-money-manager.md) | Live on Google Play | Featured |
 | [Fire & Safety ERP](fire-safety-erp.md) | In development | Short preview |
 
+## Community
+
+Events NoOzyTech has taken part in. The home page shows them briefly, with no detail pages.
+
+| Event | What it is | Status |
+|---|---|---|
+| Perinthalmanna Startup Connect | A startup, IT and software team gathering in Perinthalmanna, Malappuram, for startup teams, developers, designers and founders | Attended session 1. Session 2 is planned, date not set (as of 2026-10-10). |
+
+The poster is at `assets/images/events/perinthalmanna-startup-connect.jpg`, a 640 px copy of the organizer's poster. When session 2 gets a date, or has happened, update the status here and in `content/home.ts`.
+
 ## Why NoOzyTech exists
 
 Written with Navas, October 2026. This is the source for the home page's headline and the about page.

@@ -5,6 +5,7 @@ import capsCreditCard from "@/assets/images/caps/caps-credit-card.png";
 import capsHome from "@/assets/images/caps/caps-home.png";
 import capsIncomeReport from "@/assets/images/caps/caps-income-report.png";
 import capsLoans from "@/assets/images/caps/caps-loans.png";
+import perinthalmannaStartupConnect from "@/assets/images/events/perinthalmanna-startup-connect.jpg";
 import { erp } from "@/content/erp";
 import { site } from "@/lib/site";
 
@@ -126,6 +127,23 @@ export const founder = {
     "Caps began the same way: writing down daily expenses after starting work for the first time. The habit stuck, and it became an app.",
   ],
   link: { label: `About ${site.name}`, href: "/about" },
+};
+
+/** Events NoOzyTech has taken part in. Short on purpose: no detail pages. */
+export const community = {
+  headline: "In the community",
+  events: [
+    {
+      name: "Perinthalmanna Startup Connect",
+      text: "A meetup for startup teams, developers, designers and founders in Perinthalmanna, Malappuram.",
+      status:
+        "We were at session 1. Session 2 is planned; its date isn’t set yet.",
+      poster: {
+        src: perinthalmannaStartupConnect,
+        alt: "Poster for Perinthalmanna Startup Connect, a startup, IT and software team gathering in Perinthalmanna, Malappuram",
+      },
+    },
+  ],
 };
 
 export const contact = {
