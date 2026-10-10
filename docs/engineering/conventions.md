@@ -41,11 +41,13 @@ Folders appear as they're needed. The layout:
 ```
 app/            Routes, layouts and metadata files (sitemap, robots, icons, OG images)
 components/
+  brand/        Wordmark and symbol (generated: never edit by hand)
   ui/           Small building blocks: Button, Container, Section
   sections/     Page sections: Hero, CapsShowcase, ErpPreview
 content/        Page copy and product facts as typed data
 lib/            Helpers: site config, metadata, structured data
-public/         Static files: images, badges
+public/         Static files: images, badges, brand files
+scripts/        Build scripts, such as the brand asset generator
 docs/           These docs
 ```
 

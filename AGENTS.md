@@ -60,6 +60,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 | writing or changing visible text | [voice and copy](docs/content/voice-and-copy.md), then the matching file in [product](docs/product/) |
 | writing the privacy notice or terms | [legal](docs/content/legal.md) |
 | building or styling UI | [principles](docs/design/principles.md), [tokens](docs/design/tokens.md), [motion](docs/design/motion.md) |
+| using the logo or icons | [brand](docs/design/brand.md). The files are generated: never edit them by hand |
 | adding a page or route | [SEO](docs/engineering/seo.md), [conventions](docs/engineering/conventions.md) |
 | adding images, fonts, video or scripts | [performance](docs/engineering/performance.md) |
 | building anything interactive | [accessibility](docs/engineering/accessibility.md) |

@@ -29,6 +29,7 @@ Everything that must be true before noozytech.com goes live. Items marked **Owne
 - [ ] No `[NEED` anywhere on the site.
 - [ ] **Owner:** approve the legal name, the privacy notice and the terms ([legal](../content/legal.md)).
 - [ ] **Owner:** approve the founder story and photo.
+- [ ] **Owner:** use `public/brand/noozytech-avatar-1080.png` as the Instagram profile picture, so the profile matches the site.
 - [ ] Caps screenshots show no iPhone status bar.
 - [ ] The Google Play badge follows Google's guidelines, and the trademark line is in the footer.
 

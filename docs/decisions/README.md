@@ -39,3 +39,4 @@ What follows from it, good and bad.
 | [0005](0005-brand-name-spelling.md) | The brand name is spelled NoOzyTech | Accepted |
 | [0006](0006-erp-as-unnamed-preview.md) | The ERP is an unnamed preview with its own page | Accepted |
 | [0007](0007-canonical-address.md) | The canonical address is https://noozytech.com | Accepted |
+| [0008](0008-monochrome-brand.md) | The brand is monochrome, with an oO symbol | Accepted |

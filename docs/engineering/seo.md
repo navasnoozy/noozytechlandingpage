@@ -64,7 +64,7 @@ The home page carries one graph that describes the company, the website and Caps
       "name": "NoOzyTech",
       "alternateName": "NoozyTech",
       "url": "https://noozytech.com/",
-      "logo": "https://noozytech.com/<logo file: PNG, at least 112×112 px>",
+      "logo": "https://noozytech.com/brand/noozytech-icon-512.png",
       "foundingDate": "2026",
       "address": { "@type": "PostalAddress", "addressCountry": "IN" },
       "email": "contact@noozytech.com",

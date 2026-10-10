@@ -24,6 +24,7 @@ docs/
 │   ├── voice-and-copy.md      Tone, headlines, buttons, words to avoid
 │   └── legal.md               What the privacy notice and terms must cover
 ├── design/
+│   ├── brand.md               The logo: idea, files, construction, usage
 │   ├── principles.md          The Apple-like rules, and the "AI look" to avoid
 │   ├── tokens.md              Type, color, spacing, radius and motion values
 │   └── motion.md              When things move, and how
@@ -32,7 +33,7 @@ docs/
 │   ├── performance.md         Speed budgets for images, fonts and JavaScript
 │   ├── accessibility.md       WCAG 2.2 AA rules and testing
 │   └── seo.md                 Site map, metadata, structured data, AI search
-├── decisions/                 Why things are the way they are (0001–0007)
+├── decisions/                 Why things are the way they are (0001–0008)
 └── checklists/
     ├── definition-of-done.md  Before calling any change finished
     └── launch.md              Before going live

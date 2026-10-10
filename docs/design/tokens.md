@@ -65,7 +65,7 @@ Calculated with the WCAG formula. Text needs 4.5; large text and focus rings nee
 | `focus` on `surface` / `surface-alt` | 4.70 / 4.31 | 6.96 / 6.00 |
 
 - Neutral values are [M]. `action`, `on-action` and `focus` are [R].
-- **There is no brand accent yet.** It comes from the logo work. Until then the primary button is dark on light and light on dark, and links are text-colored with an underline. Blue appears only as the focus ring.
+- **The brand is monochrome** ([decision 0008](../decisions/0008-monochrome-brand.md)). The primary button is dark on light and light on dark, and links are text-colored with an underline. Blue appears only as the focus ring.
 - **The Caps logo colors are for Caps artwork only.** As text on white they fail contrast (coral 3.09, blue 3.88), so never use them for small text.
 - **The theme follows the visitor's system setting.** apple.com instead sets light or dark per section; we follow the system because visitors expect it and Caps itself offers light and dark themes.
 

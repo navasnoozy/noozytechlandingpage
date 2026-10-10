@@ -38,7 +38,7 @@ Not copying Apple's look. Copying its discipline.
 
 - Neutral surfaces (white, light gray, black, dark gray) and near-black text.
 - **Primary action:** a filled pill button, one per view. Everything else is a text link.
-- Until the logo work sets a brand accent, the interface is monochrome. See [tokens](tokens.md).
+- The brand and the interface are monochrome. Color comes only from product imagery (see [brand](brand.md)).
 - Light and dark mode follow the visitor's system setting. Product images get a version for each mode where it matters; Caps has both light and dark themes.
 
 ## Images
