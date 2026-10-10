@@ -5,6 +5,7 @@ import capsCreditCard from "@/assets/images/caps/caps-credit-card.png";
 import capsHome from "@/assets/images/caps/caps-home.png";
 import capsIncomeReport from "@/assets/images/caps/caps-income-report.png";
 import capsLoans from "@/assets/images/caps/caps-loans.png";
+import { erp } from "@/content/erp";
 import { site } from "@/lib/site";
 
 /*
@@ -94,10 +95,7 @@ export const erpPreview = {
       text: "Equipment records, open defects and certificates for every building.",
     },
   ],
-  earlyAccess: {
-    label: "Request early access",
-    href: `mailto:${site.email.company}?subject=${encodeURIComponent("Fire & Safety ERP early access")}`,
-  },
+  earlyAccess: erp.earlyAccess,
   more: { label: "More about the ERP", href: "/fire-safety-erp" },
 };
 
