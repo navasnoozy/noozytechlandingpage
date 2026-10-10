@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
 import { site } from "@/lib/site";
 
 import "./globals.css";
@@ -50,14 +52,18 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="bg-surface font-sans text-body text-ink antialiased">
+      <body className="flex min-h-dvh flex-col bg-surface font-sans text-body text-ink antialiased">
         <a
           href="#content"
           className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-50 focus:rounded-pill focus:bg-action focus:px-5 focus:py-3 focus:text-small focus:text-on-action"
         >
           Skip to content
         </a>
-        <main id="content">{children}</main>
+        <SiteHeader />
+        <main id="content" className="flex-1">
+          {children}
+        </main>
+        <SiteFooter />
       </body>
     </html>
   );

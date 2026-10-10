@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { ButtonLink } from "@/components/ui/button-link";
+import { Container } from "@/components/ui/container";
 import { site } from "@/lib/site";
 
 // Temporary: a preview of the design tokens, replaced by the real home page in
@@ -75,28 +77,23 @@ export default function StylePreview() {
   return (
     <>
       <section className="py-24 text-center md:py-30 lg:py-36">
-        <div className="mx-auto w-7/8 max-w-text">
+        <Container size="text">
           <p className="text-eyebrow">{site.caps.name}</p>
           <h1 className="mt-3 text-display">A habit worth carrying forward.</h1>
           <p className="mx-auto mt-6 max-w-measure text-lede text-ink-2">
             Built for clear, private money tracking.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href={site.caps.url}
-              className="inline-flex min-h-11 items-center rounded-pill bg-action px-5.5 py-3 text-on-action transition-[background-color,scale] duration-(--duration-hover) ease-out hover:bg-action/85 active:scale-97"
-            >
-              Explore Caps
-            </a>
+            <ButtonLink href={site.caps.url}>Explore Caps</ButtonLink>
             <a href={site.caps.googlePlay} className="underline">
               View on Google Play
             </a>
           </div>
-        </div>
+        </Container>
       </section>
 
       <section className="bg-surface-alt py-24 md:py-30 lg:py-36">
-        <div className="mx-auto w-7/8 max-w-page">
+        <Container>
           <h2 className="text-headline">Type scale</h2>
           <ul className="mt-12 space-y-10">
             {typeScale.map(({ token, className, sample }) => (
@@ -106,11 +103,11 @@ export default function StylePreview() {
               </li>
             ))}
           </ul>
-        </div>
+        </Container>
       </section>
 
       <section className="py-24 md:py-30 lg:py-36">
-        <div className="mx-auto w-7/8 max-w-page">
+        <Container>
           <h2 className="text-headline">Color</h2>
           <ul className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
             {colors.map(({ token, className }) => (
@@ -122,7 +119,7 @@ export default function StylePreview() {
               </li>
             ))}
           </ul>
-        </div>
+        </Container>
       </section>
     </>
   );

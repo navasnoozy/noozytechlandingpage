@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
     // AVIF first, WebP as the fallback. Next.js serves only WebP by default.
     formats: ["image/avif", "image/webp"],
   },
+  experimental: {
+    // Off on purpose: with these caches on, edits to app/globals.css were
+    // served stale by `next dev` and `next build` (docs/decisions/0009).
+    turbopackFileSystemCacheForDev: false,
+    turbopackFileSystemCacheForBuild: false,
+  },
   turbopack: {
     rules: {
       "*.css": {
