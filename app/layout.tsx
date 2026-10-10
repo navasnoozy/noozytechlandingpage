@@ -20,15 +20,14 @@ export const ensureStatic = "navigation";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  // TODO(human): Write the home page's title and description, which is what
-  // people see in Google's results. Rules from docs/engineering/seo.md: the
-  // title starts with "NoOzyTech" and is about 50–60 characters; add a
-  // `description` of about 150–160 characters. Base both on "Why NoOzyTech
-  // exists" in docs/product/company.md.
+  // The home page's search result. Rules in docs/engineering/seo.md; the
+  // wording comes from "Why NoOzyTech exists" in docs/product/company.md.
   title: {
-    default: site.name,
+    default: `${site.name} – Simple, honest software for life and work`,
     template: `%s – ${site.name}`,
   },
+  description:
+    "NoOzyTech makes software that feels simple and stays honest. Caps Money Manager tracks your wallets, cards, loans and budgets on Android, with no ads.",
   applicationName: site.name,
   openGraph: {
     type: "website",

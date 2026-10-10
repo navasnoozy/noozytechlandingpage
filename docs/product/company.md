@@ -57,6 +57,8 @@ Written with Navas, October 2026. This is the source for the home page's headlin
 
 Technology is now part of everyday life, and people deserve technology that help them use it well in their life everyday. NoOzyTech builds software for people and businesses. We believe solving a problem isn't enough. We solve it in the most efficient, elegant and intuitive way, so it feels simple to use. and we stay honest about what our products do, because i strongly believe everything from god, everything return to god and i afraid final judgement
 
+**Publishing note:** the last sentence is Navas's personal reason for being honest. The site states the public promise ("we stay honest about what our products do") and doesn't quote the personal belief unless Navas asks for it.
+
 ### What every NoOzyTech product must be
 
 - **Efficient:** it does the job with the fewest steps and the least waiting.
