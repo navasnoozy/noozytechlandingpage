@@ -82,6 +82,7 @@ Run `pnpm check` before every commit. It runs the linter, the type-checker, the 
 
 - `main` is production: every push to `main` deploys to noozytech.com.
 - One branch per slice. Each branch gets its own Vercel preview URL.
+- Vercel: project `noozytech` in the team "noozytech's projects", linked to `navasnoozy/noozytechlandingpage`. Domains: `noozytech.com` (primary) and `www.noozytech.com` (308 redirect to it).
 - Commit messages follow Conventional Commits: `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`, `perf:`.
 - Small commits that each do one thing.
 

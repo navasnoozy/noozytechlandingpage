@@ -4,9 +4,9 @@ Everything that must be true before noozytech.com goes live. Items marked **Owne
 
 ## Vercel
 
-- [ ] **Owner:** move the Vercel team to the Pro plan ($20 per member per month as of October 2026). Vercel's Hobby plan is for non-commercial personal use only, and a company site that advertises products is commercial use. The same applies to the Caps website project.
-- [ ] **Owner:** give the Vercel connector access to the team (it currently gets "403 forbidden"), or import the GitHub repository in the Vercel dashboard.
-- [ ] The project deploys from GitHub, with `main` as the production branch.
+- [ ] **Owner:** decide on the Vercel plan. Vercel's Hobby plan is for non-commercial personal use only, and a company site that advertises products is commercial use; Pro was $20 per member per month in October 2026. The same applies to the Caps website project. (October 2026: the owner chose to stay on the current plan for now.)
+- [x] **Owner:** give the Vercel connector access to the team, and Vercel's GitHub app access to the repository. Done 2026-10-10.
+- [x] The project `noozytech` (team "noozytech's projects") deploys from GitHub, with `main` as the production branch. First deployment 2026-10-10.
 
 ## Security
 
@@ -19,8 +19,16 @@ Everything that must be true before noozytech.com goes live. Items marked **Owne
 
 ## Domain
 
-- [ ] Add noozytech.com and www.noozytech.com to the Vercel project. www redirects permanently to noozytech.com ([decision 0007](../decisions/0007-canonical-address.md)).
-- [ ] **Owner:** in Cloudflare DNS, add the records Vercel shows (usually an A record for the bare domain and a CNAME for www), with the proxy off ("DNS only").
+- [x] Add noozytech.com and www.noozytech.com to the Vercel project. www redirects permanently (308) to noozytech.com ([decision 0007](../decisions/0007-canonical-address.md)). Done 2026-10-10.
+- [ ] **Owner:** in Cloudflare DNS, add these records, each with the proxy off ("DNS only", grey cloud). These are the values Vercel recommended on 2026-10-10:
+
+  | Type | Name | Value |
+  |---|---|---|
+  | A | `@` | `216.198.79.1` |
+  | A | `@` | `64.29.17.1` |
+  | CNAME | `www` | `db0a955da7ba0297.vercel-dns-017.com` |
+
+- [ ] Once noozytech.com serves the site, redirect the `noozytech.vercel.app` address to it permanently (a host-based redirect in `next.config.ts`).
 - [ ] Check with `curl -I` that http → https, www → the bare domain, and the `*.vercel.app` address → noozytech.com are all permanent redirects.
 - [ ] Cloudflare's managed robots.txt stays off.
 
@@ -30,8 +38,8 @@ Everything that must be true before noozytech.com goes live. Items marked **Owne
 - [ ] **Owner:** approve the legal name, the privacy notice and the terms, including the two policy decisions in them: email retention (two years) and response time (30 days). See [legal](../content/legal.md).
 - [ ] **Owner:** approve the founder story and photo.
 - [ ] **Owner:** use `public/brand/noozytech-avatar-1080.png` as the Instagram profile picture, so the profile matches the site.
-- [ ] Caps screenshots show no iPhone status bar.
-- [ ] The Google Play badge follows Google's guidelines, and the trademark line is in the footer.
+- [x] Caps screenshots show no iPhone status bar.
+- [x] The Google Play link is a text button ("Get it on Google Play") without Google's logo, and the trademark line is in the footer. If the official badge is used later, download it from Google and follow its badge guidelines.
 
 ## Measurement
 

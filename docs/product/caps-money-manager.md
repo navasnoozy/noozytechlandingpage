@@ -108,7 +108,7 @@ These live in the Caps app repository (`myxepnse`). Copy what the site needs int
 - **The clean screenshots were captured on an iPhone simulator.** They show the iPhone status bar and Dynamic Island. Caps is Android-only, so don't use them as they are. Crop the status bar off, or capture new screenshots on an Android phone or emulator.
 - **This site's copies** are in `assets/images/caps/`. They're cropped from the clean screenshots: the top 200 px (iPhone status bar) and the content under the tab bar are removed, and they're resized to 660 px wide. Light theme only. [NEED: dark-theme screenshots, to show in dark mode.]
 - Don't use the old teal, red and orange icon in `marketing/play_store/old_icon_design/`, or the dark `caps_feature_graphic_s26_ultra_v1` graphic. Both show retired branding.
-- Use Google's official "Get it on Google Play" badge, unchanged, and add this line to the site footer: "Google Play and the Google Play logo are trademarks of Google LLC."
+- The site links to Google Play with a text button, "Get it on Google Play", without Google's logo. If the official badge is used later, download it from Google, use it unchanged, and follow Google's badge guidelines. The footer already carries the line "Google Play and the Google Play logo are trademarks of Google LLC."
 
 ### Logo colors
 

@@ -36,7 +36,7 @@ A verb plus what people get. The same action always has the same label.
 
 | Action | Label |
 |---|---|
-| Install Caps | Google's official "Get it on Google Play" badge |
+| Install Caps | Get it on Google Play (a text button, without Google's logo) |
 | Go to the Caps website | Explore Caps |
 | ERP early access | Request early access |
 | Email the company | Email us, or show the address itself |
