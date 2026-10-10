@@ -13,6 +13,10 @@ export const site = {
   description:
     "NoOzyTech makes software that feels simple and stays honest. Caps Money Manager tracks your wallets, cards, loans and budgets on Android, with no ads.",
   foundingYear: 2026,
+  // Plain-text status lines only: no emblems, logos or numbers
+  // (docs/content/registrations.md).
+  legalForm: "Sole proprietorship",
+  msme: "MSME registered under Udyam Registration (Ministry of Micro, Small and Medium Enterprises)",
   country: "IN",
   founder: {
     name: "Navas CK",

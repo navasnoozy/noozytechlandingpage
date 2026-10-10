@@ -29,11 +29,11 @@ How to word these on the site: [registrations](../content/registrations.md). Tak
 
 | | Value |
 |---|---|
-| Legal form | [NEED: sole proprietorship, private limited company, or LLP] |
-| CIN or LLPIN | [NEED: if a company or LLP] |
-| Registered office | [NEED: required on the home page if a company] |
-| DPIIT recognition | [NEED: Certificate of Recognition number (DIPP…) and valid-until date, or "not recognized" if only a Startup India profile exists] |
-| Udyam registration | [NEED: Udyam Registration Number, size class (micro, small or medium) and its classification year] |
+| Legal form | Sole proprietorship, owned by Navas CK (confirmed by the owner, 2026-10-10) |
+| CIN or LLPIN | None: not a company or LLP |
+| Registered office | Exists, but kept private: never shown on the site |
+| DPIIT recognition | **Not shown.** A sole proprietorship isn't eligible for DPIIT recognition, so the owner's Startup India registration is a portal profile, not recognition. Revisit only if the business becomes a company or LLP and receives a Certificate of Recognition. |
+| Udyam registration | Registered (confirmed by the owner). The number and size class are kept private, so the site states only that it's registered. |
 | GSTIN | [NEED: if registered, and whether to show it; optional] |
 | Trademarks | [NEED: any registered trademarks; use ® only for those] |
 

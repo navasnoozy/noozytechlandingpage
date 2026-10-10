@@ -41,6 +41,7 @@ export function SiteFooter() {
             Copyright © {site.foundingYear} {site.name}. All rights reserved.
           </p>
           <p>India</p>
+          <p className="basis-full">{site.msme}.</p>
         </div>
       </Container>
     </footer>

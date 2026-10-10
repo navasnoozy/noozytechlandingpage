@@ -33,6 +33,11 @@ export const about = {
     headline: "Company facts",
     rows: [
       { term: "Name", detail: site.name },
+      {
+        term: "Legal form",
+        detail: `${site.legalForm}, owned by ${site.founder.name}`,
+      },
+      { term: "Registration", detail: site.msme },
       { term: "Founded", detail: String(site.foundingYear) },
       { term: "Based in", detail: "India" },
       { term: "Founder", detail: site.founder.name },

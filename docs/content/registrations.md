@@ -15,6 +15,16 @@ How NoOzyTech's legal status and government registrations appear on the site. Re
 - A sole proprietorship can't get DPIIT recognition. Any entity type can register under Udyam.
 - None of these registers a product. Never call Caps Money Manager or the ERP "government registered" or "government approved". For a finance app, that would also suggest approval from a financial regulator.
 
+## What the site says today
+
+NoOzyTech is a sole proprietorship, and the owner keeps registration numbers and the office address private. So the site carries:
+
+- **Footer, every page:** "MSME registered under Udyam Registration (Ministry of Micro, Small and Medium Enterprises)."
+- **About page, company facts:** "Legal form: Sole proprietorship, owned by Navas CK", plus the same registration line.
+- **No DPIIT or Startup India mention.** A sole proprietorship can't be DPIIT-recognized.
+
+The text lives in `lib/site.ts` (`legalForm`, `msme`). Adding the Udyam number and a verification link later would make the claim checkable.
+
 ## Rules
 
 1. **Text only.** Never show the State Emblem (the Lion Capital) or anything resembling it, the national flag or the chakra, or any ministry or programme logo: Startup India, MSME, Digital India, Make in India. Using them for business is prohibited (State Emblem Act 2005, ss.3–4; Emblems and Names Act 1950, s.3 with schedule entries 4 and 7). The Startup India logo needs DPIIT's written approval, and recognition doesn't grant it.
