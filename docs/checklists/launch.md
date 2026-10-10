@@ -15,7 +15,8 @@ Everything that must be true before noozytech.com goes live. Items marked **Owne
 ## Email
 
 - [x] **Owner:** create contact@noozytech.com in Zoho Mail, as a mailbox or an alias, and test sending and receiving. Done 2026-10-10: an alias of the caps@ mailbox, display name "NoOzyTech"; the test email arrived.
-- [ ] **Owner:** add a DMARC record in Cloudflare (start with `p=none` and a reporting address), and check that Zoho's DKIM record is in place.
+- [x] Add a DMARC record in Cloudflare (start with `p=none` and a reporting address), and check that Zoho's DKIM record is in place. Done 2026-10-10: `_dmarc` TXT `v=DMARC1; p=none; rua=mailto:contact@noozytech.com`; DKIM (`zmail._domainkey`) and SPF already set. The third MX record was also corrected to `mx3.zoho.in` (priority 50).
+- [ ] After a few weeks of clean DMARC reports (only Zoho sending), tighten the policy to `p=quarantine`.
 
 ## Domain
 
