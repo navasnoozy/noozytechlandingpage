@@ -5,6 +5,8 @@
  */
 export const site = {
   name: "NoOzyTech",
+  // The older spelling, for structured data only (docs/decisions/0005).
+  alternateName: "NoozyTech",
   url: "https://noozytech.com",
   // The home page's title, H1 and description agree on one idea (docs/engineering/seo.md).
   tagline: "Simple, honest software for life and work",

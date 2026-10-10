@@ -5,7 +5,8 @@ Usage, from the repository root:
     python3 -I scripts/brand/build.py <Inter variable font with opsz and wght axes>
 The Latin Inter file that next/font downloads works: .next/static/media/*.p.*.woff2
 
-Writes app/favicon.ico, app/icon.png, app/apple-icon.png, public/brand/* and
+Writes app/favicon.ico, app/icon.png, app/apple-icon.png, the social share
+image (app/opengraph-image.png, app/twitter-image.png), public/brand/* and
 components/brand/*.tsx. Design rules: docs/design/brand.md.
 """
 
@@ -41,12 +42,32 @@ def num(n):
 
 # ---------------------------------------------------------------- wordmark
 
-def build_wordmark(font_path):
-    static = instantiateVariableFont(TTFont(font_path), {"wght": WEIGHT, "opsz": OPSZ})
+def instance(font_path, wght, opsz):
+    """A static instance of the variable font, as TTF bytes."""
+    static = instantiateVariableFont(TTFont(font_path), {"wght": wght, "opsz": opsz})
     static.flavor = None
     buf = io.BytesIO()
     static.save(buf)
-    font_bytes = buf.getvalue()
+    return buf.getvalue()
+
+
+def shape(font_bytes, text, tracking_em=0.0):
+    """Glyph x positions (font units) with the font's kerning, plus total advance."""
+    upm = TTFont(io.BytesIO(font_bytes))["head"].unitsPerEm
+    buffer = hb.Buffer()
+    buffer.add_str(text)
+    buffer.guess_segment_properties()
+    hb.shape(hb.Font(hb.Face(font_bytes)), buffer, {"kern": True, "liga": False})
+    xs, x = [], 0.0
+    glyphs = list(zip(buffer.glyph_infos, buffer.glyph_positions))
+    for i, (info, pos) in enumerate(glyphs):
+        xs.append((text[info.cluster], x + pos.x_offset))
+        x += pos.x_advance + (tracking_em * upm if i < len(glyphs) - 1 else 0)
+    return xs, x, upm
+
+
+def build_wordmark(font_path):
+    font_bytes = instance(font_path, WEIGHT, OPSZ)
     font = TTFont(io.BytesIO(font_bytes))
     upm, cap = font["head"].unitsPerEm, font["OS/2"].sCapHeight
     gs, order = font.getGlyphSet(), font.getGlyphOrder()
@@ -135,6 +156,32 @@ def write_ico(path, images):
     path.write_bytes(out + b"".join(pngs))
 
 
+# ------------------------------------------------------------ share image
+
+def draw_text(draw, font_bytes, text, size, x_center, baseline, fill, tracking_em=0.0):
+    """Centered text, glyph by glyph, using HarfBuzz positions (kerning and tracking)."""
+    from PIL import ImageFont
+
+    positions, advance, upm = shape(font_bytes, text, tracking_em)
+    font = ImageFont.truetype(io.BytesIO(font_bytes), size)
+    k = size / upm
+    left = x_center - advance * k / 2
+    for char, x in positions:
+        draw.text((left + x * k, baseline), char, font=font, fill=fill, anchor="ls")
+
+
+def draw_share_image(font_path, tagline):
+    """1200x630 social card: the wordmark and the tagline on the light alternate surface."""
+    ss, W, H = 2, 1200, 630
+    img = Image.new("RGB", (W * ss, H * ss), (245, 245, 247))
+    dr = ImageDraw.Draw(img)
+    bold = instance(font_path, WEIGHT, OPSZ)
+    regular = instance(font_path, 400, OPSZ)
+    draw_text(dr, bold, TEXT, 132 * ss, W * ss / 2, 318 * ss, INK_RGBA[:3], TRACKING_EM)
+    draw_text(dr, regular, tagline, 46 * ss, W * ss / 2, 410 * ss, (110, 110, 115), -0.012)
+    return img.resize((W, H), Image.LANCZOS)
+
+
 # ------------------------------------------------------------------ output
 
 def svg_file(view, d, fill, evenodd=False):
@@ -201,7 +248,16 @@ def main(font_path):
     draw_icon(512, 1.0, 0.2, 0.225).save(brand / "noozytech-icon-512.png", optimize=True)
     draw_icon(1080, 1.0, 0.26, None).save(brand / "noozytech-avatar-1080.png", optimize=True)
 
-    for p in sorted([*brand.iterdir(), *comps.iterdir(), app / "favicon.ico", app / "icon.png", app / "apple-icon.png"]):
+    # The share image for every page: same file for Open Graph and X.
+    share = draw_share_image(font_path, "Simple, honest software for life and work")
+    alt = "NoOzyTech: simple, honest software for life and work"
+    for name in ("opengraph-image", "twitter-image"):
+        share.save(app / f"{name}.png", optimize=True)
+        (app / f"{name}.alt.txt").write_text(alt)
+
+    outputs = [*brand.iterdir(), *comps.iterdir()]
+    outputs += [app / n for n in ("favicon.ico", "icon.png", "apple-icon.png", "opengraph-image.png", "twitter-image.png")]
+    for p in sorted(outputs):
         print(f"{p.relative_to(ROOT)}  {p.stat().st_size:,} bytes")
 
 

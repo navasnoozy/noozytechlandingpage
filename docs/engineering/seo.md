@@ -41,7 +41,8 @@ Every page exports metadata through the Next.js Metadata API.
 - **Description:** unique, about 150–160 characters, a plain summary that makes people want to click. Google may rewrite it.
 - **Canonical:** `alternates.canonical` on every page, set to the page's own address.
 - **Social cards:** Open Graph title, description and image, plus an X card of type `summary_large_image`.
-- **Watch the merge.** Metadata merges shallowly. A canonical set in the root layout leaks into every page that doesn't set its own. A page's `openGraph` object replaces the root's completely rather than adding to it.
+- **Watch the merge.** Metadata merges shallowly. A canonical set in the root layout leaks into every page that doesn't set its own. A page's `openGraph` object replaces the root's completely rather than adding to it, and that silently drops the share image.
+- **Use `pageMetadata()` from `lib/metadata.ts` for every page.** It returns the title, description, canonical and complete social cards, share image included.
 - Never use `nosnippet` or `max-snippet`. They stop search results and AI answers from quoting the page.
 
 ## Keeping pages static

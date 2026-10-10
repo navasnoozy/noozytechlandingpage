@@ -31,7 +31,8 @@ Go through this before calling any change finished. A change that fails an item 
 
 ## SEO
 
-- [ ] A new page has a unique title, description and canonical, a social image, and an entry in the sitemap.
+- [ ] A new page has a unique title, description and canonical (use `pageMetadata()`), and an entry in `app/sitemap.ts`.
+- [ ] A page whose content changed has a new last-modified date in `app/sitemap.ts`.
 - [ ] Any structured data validates and describes only visible content.
 - [ ] Links use descriptive text.
 

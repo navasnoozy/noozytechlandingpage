@@ -16,6 +16,7 @@ It's drawn from the same typeface as the website, so the logo and the pages read
 | Symbol | Where the wordmark won't fit: favicons, app icons, profile pictures | `components/brand/symbol.tsx`, `public/brand/noozytech-symbol.svg` (and `-white`) |
 | App icon | The symbol in a dark rounded tile | `public/brand/noozytech-icon-512.png` (the structured data logo), `app/icon.png`, `app/apple-icon.png`, `app/favicon.ico` |
 | Profile picture | Instagram and other profiles, which crop it to a circle | `public/brand/noozytech-avatar-1080.png` |
+| Share image | The preview when a link is shared: wordmark and tagline, 1200×630 | `app/opengraph-image.png`, `app/twitter-image.png` |
 
 Use the wordmark or the symbol, never both side by side: the wordmark already contains the oO.
 
