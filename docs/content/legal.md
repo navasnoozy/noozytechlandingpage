@@ -2,6 +2,15 @@
 
 What the privacy notice and the terms must cover. This summarizes research from October 2026. It isn't legal advice, so have the final texts checked before launch.
 
+## Status
+
+Both pages are drafted in `content/legal.tsx` (October 10, 2026) and need the owner's approval before launch. Two lines in the privacy notice are policy decisions, not facts:
+
+- emails are deleted within two years of the last exchange
+- requests about personal information get a response within 30 days
+
+When the texts are approved, set their effective date to the approval date.
+
 ## Privacy notice (`/privacy`)
 
 The notice covers this website only. The Caps app has its own policy at https://caps.noozytech.com/privacy, and the notice links to it.
