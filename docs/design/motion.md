@@ -4,8 +4,8 @@ Motion explains or responds. It never decorates. Values live in [tokens](tokens.
 
 ## When things move
 
-- **One authored moment per page:** the hero entrance. It's the only choreographed animation.
-- **The hero headline is visible on the first frame.** Never fade it in. It's usually the page's Largest Contentful Paint, and hiding it delays both the visitor and that measurement. The authored moment animates the product imagery around it.
+- **One authored moment per page:** the first product imagery entering. It's the only choreographed animation. On the home page, the Caps phones rise into view (the `reveal` class in `app/globals.css`).
+- **The hero headline is visible on the first frame.** Never fade it in. It's usually the page's Largest Contentful Paint, and hiding it delays both the visitor and that measurement. The authored moment animates the product imagery instead.
 - **Sections may reveal once** as they scroll into view: a short rise and fade, for the whole group at once or with a short stagger. Not every paragraph, card or image.
 - **Responses to the visitor:** hover, press and menus. Quick and quiet.
 - Nothing else moves.

@@ -216,4 +216,26 @@
       translate: none;
     }
   }
+
+  /*
+   * Scroll reveal (docs/design/motion.md): rises and fades in as it enters
+   * the viewport, tied to scrolling, with no JavaScript. Without support for
+   * scroll-driven animations, or with reduced motion, it's simply visible.
+   */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 80%;
+      }
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      translate: 0 var(--reveal-distance);
+    }
+  }
 }

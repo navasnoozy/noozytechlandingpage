@@ -13,8 +13,8 @@ Facts about Caps for this website. Checked on 2026-10-09 against the app's sourc
 | Platform | Status | What to say |
 |---|---|---|
 | Android | Live on Google Play | "Get it on Google Play" |
-| iPhone (iOS) | Not released | Nothing. Don't mention iOS or the App Store, and don't show Caps on an iPhone. |
-| Web | A page exists at caps.noozytech.com/caps-web | Nothing yet. [NEED: is Caps Web public?] |
+| iPhone (iOS) | In development (caps.noozytech.com says so) | Nothing. Don't mention iOS or the App Store, and don't show Caps on an iPhone. |
+| Web | In development: caps.noozytech.com/caps-web is a "coming soon" page for a web dashboard | Nothing until it launches |
 
 ## Links
 
@@ -106,6 +106,7 @@ These live in the Caps app repository (`myxepnse`). Copy what the site needs int
 | Clean screenshots | `marketing/play_store/caps_*_iphone17promax_clean_1320x2868.png` | Home, credit card, income report, budget, loans |
 
 - **The clean screenshots were captured on an iPhone simulator.** They show the iPhone status bar and Dynamic Island. Caps is Android-only, so don't use them as they are. Crop the status bar off, or capture new screenshots on an Android phone or emulator.
+- **This site's copies** are in `assets/images/caps/`. They're cropped from the clean screenshots: the top 200 px (iPhone status bar) and the content under the tab bar are removed, and they're resized to 660 px wide. Light theme only. [NEED: dark-theme screenshots, to show in dark mode.]
 - Don't use the old teal, red and orange icon in `marketing/play_store/old_icon_design/`, or the dark `caps_feature_graphic_s26_ultra_v1` graphic. Both show retired branding.
 - Use Google's official "Get it on Google Play" badge, unchanged, and add this line to the site footer: "Google Play and the Google Play logo are trademarks of Google LLC."
 

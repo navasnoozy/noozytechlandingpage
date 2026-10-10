@@ -40,6 +40,7 @@ Folders appear as they're needed. The layout:
 
 ```
 app/            Routes, layouts and metadata files (sitemap, robots, icons, OG images)
+assets/         Images that pages import; next/image optimizes them
 components/
   brand/        Wordmark and symbol (generated: never edit by hand)
   layout/       Parts of every page: header, footer
