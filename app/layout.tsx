@@ -22,14 +22,13 @@ export const ensureStatic = "navigation";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  // The home page's search result. Rules in docs/engineering/seo.md; the
-  // wording comes from "Why NoOzyTech exists" in docs/product/company.md.
+  // The home page's search result (docs/engineering/seo.md). Pages without a
+  // title use the default; the rest get "Page – NoOzyTech".
   title: {
-    default: `${site.name} – Simple, honest software for life and work`,
+    default: `${site.name} – ${site.tagline}`,
     template: `%s – ${site.name}`,
   },
-  description:
-    "NoOzyTech makes software that feels simple and stays honest. Caps Money Manager tracks your wallets, cards, loans and budgets on Android, with no ads.",
+  description: site.description,
   applicationName: site.name,
   openGraph: {
     type: "website",

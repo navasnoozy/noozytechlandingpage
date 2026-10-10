@@ -15,7 +15,7 @@ import { site } from "@/lib/site";
 export type Screenshot = { src: StaticImageData; alt: string };
 
 export const hero = {
-  headline: "Simple, honest software for life and work.",
+  headline: `${site.tagline}.`,
   lede: "We make software for people and businesses that takes fewer steps, needs no manual, and never sells your data.",
 };
 

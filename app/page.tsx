@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
-
 import { CapsShowcase } from "@/components/sections/caps-showcase";
 import { ErpPreview } from "@/components/sections/erp-preview";
 import { FounderContact } from "@/components/sections/founder-contact";
 import { HomeHero } from "@/components/sections/home-hero";
 import { Principles } from "@/components/sections/principles";
+import { pageMetadata } from "@/lib/metadata";
+import { site } from "@/lib/site";
 
-// The title and description come from the root layout's defaults.
-export const metadata: Metadata = {
-  alternates: { canonical: "/" },
-};
+// No title: the home page uses the root layout's default title.
+export const metadata = pageMetadata({
+  description: site.description,
+  path: "/",
+});
 
 /*
  * Section backgrounds alternate so neighbours never match in either mode:

@@ -6,6 +6,10 @@
 export const site = {
   name: "NoOzyTech",
   url: "https://noozytech.com",
+  // The home page's title, H1 and description agree on one idea (docs/engineering/seo.md).
+  tagline: "Simple, honest software for life and work",
+  description:
+    "NoOzyTech makes software that feels simple and stays honest. Caps Money Manager tracks your wallets, cards, loans and budgets on Android, with no ads.",
   foundingYear: 2026,
   country: "IN",
   founder: {
