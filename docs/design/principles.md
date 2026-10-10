@@ -20,12 +20,12 @@ Not copying Apple's look. Copying its discipline.
 ## Layout
 
 - **Hero:** centered. One plain headline says what NoOzyTech makes and for whom, and it's readable on the first frame. Nielsen Norman Group found that people spend about 57% of their viewing time above the fold.
-- **Sections:** alternate the `bg` and `bg-alt` backgrounds, with at most one dark band on a light page.
+- **Sections:** alternate the `surface` and `surface-alt` backgrounds, with at most one dark band on a light page.
 - **Section headers:** centered for statements. Left-aligned, with a link on the right, for galleries.
 - **Products side by side:** Apple's home-page tiles. Two tiles per row with 12 px gaps, the copy centered at the top and the product image at the bottom.
 - **Text width:** paragraphs are never wider than the `measure` token.
 - **Navigation:** one sticky bar with the logo and at most four links, nothing else. Below 834 px the links collapse into a menu button.
-- **Footer:** `bg-alt`, small text, links in columns that stack on small screens. It includes the copyright line and the Google Play trademark line.
+- **Footer:** `surface-alt`, small text, links in columns that stack on small screens. It includes the copyright line and the Google Play trademark line.
 
 ## Typography
 

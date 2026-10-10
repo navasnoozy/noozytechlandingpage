@@ -17,16 +17,34 @@ Next.js 16 (App Router), React, TypeScript, Tailwind CSS 4, pnpm, hosted on Verc
 
 The canonical address is `https://noozytech.com`: no www, no trailing slash.
 
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
+
 ## Commands
 
-Added when the app is scaffolded.
+| Task | Command |
+|---|---|
+| Install dependencies | `pnpm install` |
+| Run locally at http://localhost:3000 | `pnpm dev` |
+| Lint | `pnpm lint` |
+| Type-check | `pnpm typecheck` |
+| Format files | `pnpm format` |
+| Production build | `pnpm build` |
+| All checks, before every commit | `pnpm check` |
 
 ## Rules
 
 1. **Take facts only from `docs/product/`.** Never invent numbers, ratings, download counts, prices, dates, features, customers, awards or quotes. If a fact is missing, write `[NEED: what is missing]` and ask.
 2. **Spell the brand exactly `NoOzyTech`** in visible text. The capital O is deliberate. See [decision 0005](docs/decisions/0005-brand-name-spelling.md).
 3. **Render statically.** Server Components by default. Add `"use client"` only to the smallest component that needs interaction. Pages never fetch data at request time.
-4. **Build UI from the design docs and tokens.** No hard-coded colors, font sizes, spacing or durations. Avoid the generic "AI look" listed in the [design principles](docs/design/principles.md).
+4. **Build UI from the design docs and tokens.** No hard-coded colors, font sizes, spacing or durations. Tailwind's default palette and sizes are removed, so only the tokens in `app/globals.css` exist as utilities. Avoid the generic "AI look" listed in the [design principles](docs/design/principles.md).
 5. **Meet WCAG 2.2 AA in every change**, not as a later polish step.
 6. **Stay inside the performance budgets.** They are limits, not goals.
 7. **Give every page a unique title, description and canonical URL.** Add structured data only for content that is visible on the page.

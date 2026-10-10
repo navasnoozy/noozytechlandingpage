@@ -1,0 +1,3 @@
+# Docs keep their hand-written formatting.
+*.md
+pnpm-lock.yaml

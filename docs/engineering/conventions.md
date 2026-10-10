@@ -14,9 +14,9 @@
 
 - Exact versions are pinned in `package.json`. Upgrade deliberately, in a change of its own, never as a side effect.
 - Install Next.js security releases within a week of their release.
-- Next.js 16 changed several APIs. Check the official docs for the installed version before relying on memory. Changes that matter here:
-  - `export const ensureStatic = 'navigation'` in the root layout (new in 16.4) makes the build fail if a route stops being static.
-  - On the hero image, use `preload` or `fetchPriority="high"`. The `priority` prop is deprecated.
+- Next.js 16 changed several APIs. Before writing Next.js code, read the guide for the installed version in `node_modules/next/dist/docs/`. Changes that matter here:
+  - `export const ensureStatic = 'navigation'` in the root layout (new in 16.4) makes the build fail if a route stops being static. It needs `cacheComponents`, which is on in `next.config.ts`.
+  - On the hero image, use `fetchPriority="high"` or `loading="eager"`. The `priority` prop is deprecated, and the docs prefer these two over `preload`.
   - Route parameters passed to pages, social images, icons and sitemaps are Promises.
   - `middleware` is now called `proxy`.
 
@@ -36,7 +36,7 @@
 
 ## Folders
 
-Created in the scaffold slice. The planned layout:
+Folders appear as they're needed. The layout:
 
 ```
 app/            Routes, layouts and metadata files (sitemap, robots, icons, OG images)
@@ -71,7 +71,7 @@ docs/           These docs
 
 ## Quality gates
 
-Lint, type-check and a production build must all pass before every commit. The exact commands go in AGENTS.md once the app is scaffolded.
+Run `pnpm check` before every commit. It runs the linter, the type-checker, the format check and a production build, and all four must pass. The individual commands are listed in AGENTS.md.
 
 ## Git
 

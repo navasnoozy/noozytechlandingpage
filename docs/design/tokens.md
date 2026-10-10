@@ -37,34 +37,34 @@ Each size has three steps that follow the breakpoints below: large (1069 px and 
 
 The interface is neutral. Color comes from the products.
 
-### Light mode
+Each token becomes a Tailwind utility of the same name: `bg-surface`, `text-ink-2`, `border-line`, `bg-action text-on-action`.
 
-| Token | Value | Use | Contrast |
+| Token | Light | Dark | Use |
 |---|---|---|---|
-| `bg` | `#ffffff` | Page background | |
-| `bg-alt` | `#f5f5f7` | Alternate sections, tiles, footer | |
-| `text` | `#1d1d1f` | Headlines and body text | 16.8 on `bg`, 15.5 on `bg-alt` |
-| `text-2` | `#6e6e73` | Secondary text | 5.07 on `bg`, 4.66 on `bg-alt` |
-| `text-3` | `#86868b` | Large text (24 px and up) and disabled states only | 3.62 on `bg`: fails for small text |
-| `line` | `rgba(0, 0, 0, 0.16)` | Hairlines and borders | |
-| `action` | `#1d1d1f` | Primary button background, with a white label | 16.8 |
-| `focus` | `#0071e3` | Focus ring | 4.70 on `bg`, 4.31 on `bg-alt` |
+| `surface` | `#ffffff` | `#000000` | Page background |
+| `surface-alt` | `#f5f5f7` | `#161617` | Alternate sections, tiles, footer |
+| `surface-raised` | `#ffffff` | `#1d1d1f` | Cards on the page background |
+| `ink` | `#1d1d1f` | `#f5f5f7` | Headlines and body text |
+| `ink-2` | `#6e6e73` | `#86868b` | Secondary text |
+| `ink-3` | `#86868b` | `#6e6e73` | Large text (24 px and up) and disabled states only |
+| `line` | `rgb(0 0 0 / 0.16)` | `rgb(255 255 255 / 0.24)` | Hairlines and borders |
+| `action` | `#1d1d1f` | `#f5f5f7` | Primary button background |
+| `on-action` | `#ffffff` | `#1d1d1f` | Primary button label |
+| `focus` | `#0071e3` | `#2997ff` | Focus ring |
 
-### Dark mode
+### Contrast
 
-| Token | Value | Use | Contrast |
-|---|---|---|---|
-| `bg` | `#000000` | Page background | |
-| `bg-alt` | `#161617` | Alternate sections, tiles, footer | |
-| `raised` | `#1d1d1f` | Cards on `bg` | |
-| `text` | `#f5f5f7` | Headlines and body text | 19.3 on `bg`, 16.6 on `bg-alt` |
-| `text-2` | `#86868b` | Secondary text | 5.80 on `bg`, 4.99 on `bg-alt`, 4.65 on `raised` |
-| `text-3` | `#6e6e73` | Large text and disabled states only | |
-| `line` | `rgba(255, 255, 255, 0.24)` | Hairlines and borders | |
-| `action` | `#f5f5f7` | Primary button background, with a `#1d1d1f` label | 15.5 |
-| `focus` | `#2997ff` | Focus ring | 6.96 on `bg`, 6.00 on `bg-alt` |
+Calculated with the WCAG formula. Text needs 4.5; large text and focus rings need 3.
 
-- Neutral values are [M]. `action` and `focus` are [R]. Contrast ratios were calculated with the WCAG formula; text needs 4.5, large text and focus rings need 3.
+| Pair | Light | Dark |
+|---|---|---|
+| `ink` on `surface` / `surface-alt` | 16.8 / 15.5 | 19.3 / 16.6 |
+| `ink-2` on `surface` / `surface-alt` | 5.07 / 4.66 | 5.80 / 4.99, and 4.65 on `surface-raised` |
+| `ink-3` on `surface` | 3.62: large text only | 4.14: large text only |
+| `on-action` on `action` | 16.8 | 15.5 |
+| `focus` on `surface` / `surface-alt` | 4.70 / 4.31 | 6.96 / 6.00 |
+
+- Neutral values are [M]. `action`, `on-action` and `focus` are [R].
 - **There is no brand accent yet.** It comes from the logo work. Until then the primary button is dark on light and light on dark, and links are text-colored with an underline. Blue appears only as the focus ring.
 - **The Caps logo colors are for Caps artwork only.** As text on white they fail contrast (coral 3.09, blue 3.88), so never use them for small text.
 - **The theme follows the visitor's system setting.** apple.com instead sets light or dark per section; we follow the system because visitors expect it and Caps itself offers light and dark themes.

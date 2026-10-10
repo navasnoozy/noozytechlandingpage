@@ -12,10 +12,12 @@ Hard limits: a change that breaks one isn't done.
 | Interaction to Next Paint (INP) | 200 ms | under 100 ms |
 | Cumulative Layout Shift (CLS) | 0.1 | 0 |
 | Lighthouse on mobile: Performance, Accessibility, Best Practices, SEO | 95 each | 100 each |
-| JavaScript on the home page, compressed | 150 kB | as little as possible |
+| JavaScript on the home page, compressed, not counting the `nomodule` polyfills that modern browsers skip | 150 kB | as little as possible |
 | Home page weight on first load | 1 MB | under 500 kB |
 
 The Core Web Vitals limits are Google's "good" thresholds, measured at the 75th percentile of real visits.
+
+Next.js 16.4 and React 19.3 alone use about 132 kB of the JavaScript budget, measured in October 2026 on a page with no client components. That leaves about 18 kB for the site's own interactive code, so every client component has to earn its place.
 
 ## Images
 
@@ -33,6 +35,7 @@ The Core Web Vitals limits are Google's "good" thresholds, measured at the 75th 
 - The typeface is set in [decision 0003](../decisions/0003-typeface.md).
 - At most one font family, ideally variable, loaded with `next/font`, subset to Latin, with `display: swap`.
 - Never load fonts from an external CDN at runtime.
+- Measured in October 2026: Inter's Latin file is 71 kB. Next.js preloads it automatically through an HTTP `Link` header. Files for other alphabets download only if a page uses those characters.
 
 ## JavaScript
 

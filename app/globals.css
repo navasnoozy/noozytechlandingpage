@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. docs/design/tokens.md is the source of truth: change a value
+ * there and here in the same commit, never inside a component.
+ *
+ * Tailwind's default colors, type sizes, breakpoints, radii, easings, widths
+ * and shadows are removed, so only these tokens exist as utilities.
+ */
+@theme {
+  --color-*: initial;
+  --text-*: initial;
+  --breakpoint-*: initial;
+  --radius-*: initial;
+  --ease-*: initial;
+  --container-*: initial;
+  --shadow-*: initial;
+  --inset-shadow-*: initial;
+  --drop-shadow-*: initial;
+  --text-shadow-*: initial;
+
+  /* Breakpoints, mobile first */
+  --breakpoint-md: 45.9375rem; /* 735px: medium */
+  --breakpoint-nav: 52.125rem; /* 834px: navigation links appear */
+  --breakpoint-lg: 66.8125rem; /* 1069px: large */
+  --breakpoint-xl: 90.0625rem; /* 1441px: xlarge */
+
+  /* Color, light mode. Dark mode is set in the base layer below. */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f5f7;
+  --color-surface-raised: #ffffff;
+  --color-ink: #1d1d1f;
+  --color-ink-2: #6e6e73;
+  --color-ink-3: #86868b;
+  --color-line: rgb(0 0 0 / 0.16);
+  --color-action: #1d1d1f;
+  --color-on-action: #ffffff;
+  --color-focus: #0071e3;
+
+  /* Type scale. Small-screen sizes here; larger steps are set in the base layer below. */
+  --text-display: 3rem;
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.025em;
+  --text-display--font-weight: 600;
+  --text-headline: 2rem;
+  --text-headline--line-height: 1.07;
+  --text-headline--letter-spacing: -0.022em;
+  --text-headline--font-weight: 600;
+  --text-title: 1.75rem;
+  --text-title--line-height: 1.1;
+  --text-title--letter-spacing: -0.02em;
+  --text-title--font-weight: 600;
+  --text-card-title: 1.3125rem;
+  --text-card-title--line-height: 1.15;
+  --text-card-title--letter-spacing: -0.016em;
+  --text-card-title--font-weight: 600;
+  --text-lede: 1.1875rem;
+  --text-lede--line-height: 1.38;
+  --text-lede--letter-spacing: -0.012em;
+  --text-lede--font-weight: 400;
+  --text-eyebrow: 1.0625rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: -0.012em;
+  --text-eyebrow--font-weight: 600;
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.47;
+  --text-body--letter-spacing: -0.011em;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.43;
+  --text-small--letter-spacing: -0.006em;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.33;
+  --text-caption--letter-spacing: 0em;
+
+  /* Corner radius */
+  --radius-pill: 9999px;
+  --radius-card: 28px;
+  --radius-panel: 18px;
+  --radius-sm: 12px;
+
+  /* Easing */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.6, 1);
+
+  /* Widths */
+  --container-page: 1260px;
+  --container-text: 980px;
+  --container-nav: 1024px;
+  --container-measure: 68ch;
+
+  /* The translucent navigation bar */
+  --blur-nav: 20px;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Motion. Tailwind has no duration tokens: use duration-(--duration-hover). */
+    --duration-press: 100ms;
+    --duration-hover: 150ms;
+    --duration-menu: 240ms;
+    --duration-panel: 320ms;
+    --duration-reveal: 700ms;
+    --stagger: 100ms;
+    --reveal-distance: 24px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-surface: #000000;
+      --color-surface-alt: #161617;
+      --color-surface-raised: #1d1d1f;
+      --color-ink: #f5f5f7;
+      --color-ink-2: #86868b;
+      --color-ink-3: #6e6e73;
+      --color-line: rgb(255 255 255 / 0.24);
+      --color-action: #f5f5f7;
+      --color-on-action: #1d1d1f;
+      --color-focus: #2997ff;
+    }
+  }
+
+  /* Medium screens, 735px and up */
+  @media (width >= 45.9375rem) {
+    :root {
+      --text-display: 4rem;
+      --text-headline: 3rem;
+      --text-title: 2rem;
+      --text-card-title: 1.5rem;
+      --text-lede: 1.3125rem;
+      --text-eyebrow: 1.1875rem;
+    }
+  }
+
+  /* Large screens, 1069px and up */
+  @media (width >= 66.8125rem) {
+    :root {
+      --text-display: 5rem;
+      --text-headline: 3.5rem;
+      --text-title: 2.5rem;
+      --text-card-title: 1.75rem;
+      --text-eyebrow: 1.3125rem;
+    }
+  }
+
+  html {
+    color-scheme: light dark;
+    /* Keeps linked and focused content clear of the sticky navigation bar. */
+    scroll-padding-top: 4.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-ink) 16%, transparent);
+  }
+
+  :where(h1, h2, h3, h4) {
+    text-wrap: balance;
+  }
+
+  :where(p) {
+    text-wrap: pretty;
+  }
+
+  :where(a) {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+}
