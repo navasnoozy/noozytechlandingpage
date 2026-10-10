@@ -20,7 +20,7 @@ Everything that must be true before noozytech.com goes live. Items marked **Owne
 ## Domain
 
 - [x] Add noozytech.com and www.noozytech.com to the Vercel project. www redirects permanently (308) to noozytech.com ([decision 0007](../decisions/0007-canonical-address.md)). Done 2026-10-10.
-- [ ] **Owner:** in Cloudflare DNS, add these records, each with the proxy off ("DNS only", grey cloud). These are the values Vercel recommended on 2026-10-10:
+- [x] In Cloudflare DNS, add these records, each with the proxy off ("DNS only", grey cloud). These are the values Vercel recommended on 2026-10-10. Done 2026-10-10; Vercel reports the domain correctly configured, and the Let's Encrypt certificate renews automatically.
 
   | Type | Name | Value |
   |---|---|---|
@@ -28,8 +28,8 @@ Everything that must be true before noozytech.com goes live. Items marked **Owne
   | A | `@` | `64.29.17.1` |
   | CNAME | `www` | `db0a955da7ba0297.vercel-dns-017.com` |
 
-- [ ] Once noozytech.com serves the site, redirect the `noozytech.vercel.app` address to it permanently (a host-based redirect in `next.config.ts`).
-- [ ] Check with `curl -I` that http → https, www → the bare domain, and the `*.vercel.app` address → noozytech.com are all permanent redirects.
+- [x] Once noozytech.com serves the site, redirect the `noozytech.vercel.app` address to it permanently (a host-based redirect in `next.config.ts`). Done 2026-10-10.
+- [x] Check that http → https, www → the bare domain, and `noozytech.vercel.app` → noozytech.com are all permanent (308) redirects. Checked 2026-10-10. The team alias `noozytech-noozytech-s-projects.vercel.app` asks for a Vercel login instead, so it's private and can't be indexed.
 - [ ] Cloudflare's managed robots.txt stays off.
 
 ## Content
